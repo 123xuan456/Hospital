@@ -9,4 +9,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:id="@+id/hvChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+            <RadioGroup
+                android:id="@+id/rgChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+
+            </RadioGroup>
+
+        </HorizontalScrollView>
+        <!--  <ImageView android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:id="@+id/ivShowChannel"
+              android:layout_alignParentRight="true"
+              android:src="@drawable/channel_glide_day_bg"
+              android:scaleType="fitXY"
+              />-->
+    </RelativeLayout>
 </RelativeLayout>
