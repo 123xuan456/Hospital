@@ -12,7 +12,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/shao"
+            android:src="@mipmap/shao"
             android:layout_margin="10dp"
             android:id="@+id/imageView" />
 
@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/search"
+                android:background="@mipmap/search"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 android:padding="5dp"
@@ -54,7 +54,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/user"
+            android:src="@mipmap/user"
             android:layout_margin="10dp"
             android:id="@+id/imageView2"
             android:layout_centerVertical="true"
@@ -84,7 +84,7 @@
             style="@style/MTabStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/home"
+            android:drawableTop="@drawable/slector_radiobutton_1"
             android:drawablePadding="5dp"
             android:text="首页"
             android:checked="true"
@@ -93,7 +93,7 @@
             style="@style/MTabStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/wen"
+            android:drawableTop="@drawable/slector_radiobutton_2"
             android:drawablePadding="5dp"
             android:text="问诊"
             android:id="@+id/tab_two" />
@@ -101,7 +101,7 @@
             style="@style/MTabStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/shop"
+            android:drawableTop="@drawable/slector_radiobutton_3"
             android:drawablePadding="5dp"
             android:text="健康商城"
             android:id="@+id/tab_three" />
@@ -110,7 +110,7 @@
             style="@style/MTabStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/time"
+            android:drawableTop="@drawable/slector_radiobutton_4"
             android:drawablePadding="5dp"
             android:text="消息"
             android:id="@+id/tab_four1" />
@@ -120,7 +120,7 @@
             style="@style/MTabStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/record"
+            android:drawableTop="@drawable/slector_radiobutton_5"
             android:drawablePadding="5dp"
             android:text="健康圈"
             android:id="@+id/tab_five" />
