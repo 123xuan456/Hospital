@@ -4,9 +4,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="d.hospital.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#177CB0"
+        android:id="@+id/linearLayout">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shao"
+            android:layout_margin="10dp"
+            android:id="@+id/imageView" />
 
-    <TextView
-        android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/biankuang_yuan"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:padding="5dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/imageView3" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:hint="搜疾病、药品、医院、科室"
+                android:textColor="#CBCBCB"
+                android:textSize="14sp"
+                android:layout_toEndOf="@+id/imageView3" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:layout_margin="10dp"
+            android:id="@+id/imageView2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/radioGroup1"
+        android:layout_below="@+id/linearLayout">
+
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:background="#177CB0"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            style="@style/MTabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/home"
+            android:drawablePadding="5dp"
+            android:text="首页"
+            android:checked="true"
+            android:id="@+id/tab_one" />
+        <RadioButton
+            style="@style/MTabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/wen"
+            android:drawablePadding="5dp"
+            android:text="问诊"
+            android:id="@+id/tab_two" />
+        <RadioButton
+            style="@style/MTabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/shop"
+            android:drawablePadding="5dp"
+            android:text="健康商城"
+            android:id="@+id/tab_three" />
+
+        <RadioButton
+            style="@style/MTabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/time"
+            android:drawablePadding="5dp"
+            android:text="消息"
+            android:id="@+id/tab_four1" />
+
+
+        <RadioButton
+            style="@style/MTabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/record"
+            android:drawablePadding="5dp"
+            android:text="健康圈"
+            android:id="@+id/tab_five" />
+    </RadioGroup>
+
+
+
 </RelativeLayout>
