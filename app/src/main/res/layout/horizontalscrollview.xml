@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="d.hospital.MainActivity"
-    android:orientation="horizontal">
+    >
 
 
-            <!--d.hospital.view.NoScrollListview-->
+
             <d.hospital.view.HorizontalListView
                 android:id="@+id/listview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="150dp"
+              >
 
             </d.hospital.view.HorizontalListView>
 
 
-</LinearLayout>
+</RelativeLayout>

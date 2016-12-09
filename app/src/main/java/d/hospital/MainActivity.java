@@ -17,9 +17,6 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        setContentView(R.layout.rl_titlebar);
-=======
         setContentView(R.layout.activity_main);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         radioGroup.setOnCheckedChangeListener(this);
@@ -59,6 +56,5 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment, fragment).commit();
         }
->>>>>>> 1ac6567073449f5f1852428fa96f9f4b3c4e77c1
     }
 }

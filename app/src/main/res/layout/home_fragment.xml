@@ -1,62 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="d.hospital.MainActivity">
+    >
 
 
     <LinearLayout
-        android:layout_alignBottom="@+id/ic_titlebar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/bg_gray"
+        android:background="@color/text_gray"
         android:layout_gravity="center">
         <include
-            android:id="@+id/ic_titlebar"
-            android:layout="@layout/rl_titlebar"
+            layout="@layout/rl_titlebar"
             />
-    <RelativeLayout
+        <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp">
+        android:layout_height="25dp"
+            android:background="@color/white_bg"
+            android:orientation="horizontal">
         <ImageView
-            android:layout_marginTop="3dp"
             android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
             android:src="@mipmap/bugle"
-            android:id="@+id/imageView" />
+            />
         <TextView
+            android:id="@+id/tv_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="qwertyu"
-            android:id="@+id/textView"
-            android:layout_centerVertical="true"
-            android:layout_alignBottom="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView" />
+            android:text="健康快讯"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/textview_normal"
+            android:textColor="@color/text_blue"
+            android:layout_gravity="center_vertical"
+             />
 
         <TextView
+            android:id="@+id/tv_roll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="qazwsxedcrfvtg"
-            android:layout_toEndOf="@+id/textView"
-            android:layout_centerVertical="true"
-            android:id="@+id/textView2" />
+            android:text="云南白药创口贴，一盒只要10元！"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/textview_gray"
+            android:layout_gravity="center_vertical"/>
 
-    </RelativeLayout>
+    </LinearLayout>
         <include
-            android:layout="@layout/home_module1"
+            layout="@layout/home_module1"
             />
         <include
-            android:layout="@layout/home_module2"
+            layout="@layout/home_module2"
             />
         <include
-            android:layout="@layout/home_module3"
+            layout="@layout/home_module3"
             />
+
         <include
-            android:layout="@layout/horizontalscrollview"
+            layout="@layout/horizontalscrollview"
             />
+
     </LinearLayout>
 </FrameLayout>

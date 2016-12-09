@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/title_bg_height"
     android:background="@color/title_bg"
@@ -39,6 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:text="搜疾病、药品、医生、科室"
+            android:textSize="@dimen/textview_normal"
+            android:textColor="@color/text_gray"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/hunt" />
     </RelativeLayout>
