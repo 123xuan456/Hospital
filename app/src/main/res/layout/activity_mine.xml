@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EFF5"
+    android:orientation="vertical"
+    tools:context="d.hospital.activity.MineActivity"
+    >
+    <include layout="@layout/layou_finish"
+        android:id="@+id/include"></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/include"
+                android:background="#FFFFFF"
+                android:id="@+id/relativeLayout2">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/c"
+                    android:layout_margin="10dp"
+                    android:id="@+id/view" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/relativeLayout"
+                    android:layout_toEndOf="@+id/view"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="猪八戒的悲伤"
+                        android:id="@+id/name"
+                        android:textSize="16sp"
+                        android:textColor="#323232"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康号:  "
+                        android:textSize="13sp"
+                        android:textColor="#646464"
+                        android:paddingTop="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/textView2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123456798"
+                        android:id="@+id/textView"
+                        android:paddingTop="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="微信登录账号"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:id="@+id/textView3"
+                        android:background="@mipmap/yuanjiao"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView"
+                        android:src="@mipmap/hui"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout3">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/xingixng"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/imageView2" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500"
+                    android:id="@+id/textView4"
+                    android:textColor="#177CB0"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/imageView2" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="健康点，"
+                    android:id="@+id/textView5"
+                    android:textColor="#979799"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:id="@+id/textView6"
+                    android:textColor="#177CB0"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView5" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个未完成任务"
+                    android:textColor="#979799"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView6" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView1"
+                    android:src="@mipmap/hui"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#E6E6E6"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout9"></RelativeLayout>
+
+            <include
+                layout="@layout/mine_layout1"
+                android:id="@+id/include1"
+                ></include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#E6E6E6"
+                android:layout_below="@+id/include1"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout10"></RelativeLayout>
+
+            <include
+                layout="@layout/mine_layout2"
+                android:id="@+id/include2"
+                ></include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#E6E6E6"
+                android:layout_below="@+id/include2"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout11"></RelativeLayout>
+            <include
+                layout="@layout/mine_layout3"
+                android:id="@+id/include3"
+                ></include>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
