@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical"
 
+    >
+    <include
+        layout="@layout/rl_titlebar"
+        />
+<d.hospital.view.ScrollViewExtend
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/text_gray"
-        android:layout_gravity="center">
-        <include
-            layout="@layout/rl_titlebar"
-            />
+        >
+
         <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="33dp"
             android:background="@color/white_bg"
             android:orientation="horizontal">
         <ImageView
@@ -58,11 +63,19 @@
             />
         <include
             layout="@layout/home_module3"
-            />
 
+            />
         <include
             layout="@layout/horizontalscrollview"
             />
+        <include
+            layout="@layout/home_pager"
+            />
+
+        <include
+            layout="@layout/home_step_number"
+            />
 
     </LinearLayout>
-</FrameLayout>
+</d.hospital.view.ScrollViewExtend>
+</LinearLayout>
