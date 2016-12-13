@@ -1,5 +1,6 @@
 package d.hospital.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,15 +14,17 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import d.hospital.BaseFragment;
 import d.hospital.R;
+import d.hospital.activity.MineActivity;
 import d.hospital.bean.Home_moduleBean;
 import d.hospital.utils.UrlUtils;
 import okhttp3.Call;
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements View.OnClickListener{
 
     private ImageView area1_big1,area1_little11,area1_little21,area1_little31,area1_little41;
     private ImageView area2_big2,area2_little12,area2_little22,area2_little32,area2_little42;
     private View view;
+    private ImageView iv_user;//我的
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +39,8 @@ public class HomeFragment extends BaseFragment {
 
     private void initView() {
         area1_big1 = (ImageView)view.findViewById(R.id.area1_big);
+        iv_user = (ImageView)view.findViewById(R.id.iv_user);
+        iv_user.setOnClickListener(this);
         area1_little11 = (ImageView)view.findViewById(R.id.area1_little1);
         area1_little21 = (ImageView)view.findViewById(R.id.area1_little2);
         area1_little31 = (ImageView)view.findViewById(R.id.area1_little3);
@@ -100,5 +105,15 @@ public class HomeFragment extends BaseFragment {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.iv_user:
+                Intent intent = new Intent(getActivity(),MineActivity.class);
+                startActivity(intent);
+                break;
 
+
+        }
+    }
 }
