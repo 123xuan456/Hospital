@@ -37,19 +37,19 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
             }
             break;
             case R.id.tab_two: {
-                fragment = new InquiryFragment();//我的
+                fragment = new InquiryFragment();//问诊
             }
             break;
             case R.id.tab_three: {
-                fragment = new HealthFragment();//我的
+                fragment = new HealthFragment();//健康商城
             }
             break;
             case R.id.tab_four1: {
-                fragment = new MessageFragment();//我的
+                fragment = new MessageFragment();//消息
             }
             break;
             case R.id.tab_five: {
-                fragment = new HealthFragment();//我的
+                fragment = new HealthFragment();//健康圈
             }
             break;
         }
