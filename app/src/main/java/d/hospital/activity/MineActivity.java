@@ -1,6 +1,7 @@
 package d.hospital.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -58,6 +59,8 @@ public class MineActivity extends Activity implements View.OnClickListener{
         finish_fanhui= (ImageView) findViewById(R.id.finish_fanhui);
         finish_fanhui.setOnClickListener(this);
         relativeLayout2=(RelativeLayout)findViewById(R.id.relativeLayout2);
+        relativeLayout2.setOnClickListener(this);
+
         me_doctor_layout=(RelativeLayout)findViewById(R.id.me_doctor_layout);
         me_jiankangquan_layout=(RelativeLayout)findViewById(R.id.me_jiankangquan_layout);
         me_ceping_layout=(RelativeLayout)findViewById(R.id.me_ceping_layout);
@@ -86,6 +89,11 @@ public class MineActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.finish_fanhui:
                 finish();
+                break;
+            case R.id.relativeLayout2:
+                Intent intent=new Intent(this,InformationActivity.class);
+                startActivity(intent);
+
                 break;
 
 
