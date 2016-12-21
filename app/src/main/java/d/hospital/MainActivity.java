@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.RadioGroup;
 
 import d.hospital.fragment.HealthFragment;
+import d.hospital.fragment.Health_circle_Fragment;
 import d.hospital.fragment.HomeFragment;
 import d.hospital.fragment.InquiryFragment;
 import d.hospital.fragment.MessageFragment;
@@ -49,7 +50,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
             }
             break;
             case R.id.tab_five: {
-                fragment = new HealthFragment();//健康圈
+                fragment = new Health_circle_Fragment();//健康圈
             }
             break;
         }

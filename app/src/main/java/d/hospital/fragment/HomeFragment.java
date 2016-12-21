@@ -14,7 +14,7 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import d.hospital.BaseFragment;
 import d.hospital.R;
-import d.hospital.activity.MineActivity;
+import d.hospital.activity.KeShiActivity;
 import d.hospital.bean.Home_moduleBean;
 import d.hospital.utils.UrlUtils;
 import okhttp3.Call;
@@ -109,7 +109,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iv_user:
-                Intent intent = new Intent(getActivity(),MineActivity.class);
+                Intent intent = new Intent(getActivity(),KeShiActivity.class);
                 startActivity(intent);
                 break;
 

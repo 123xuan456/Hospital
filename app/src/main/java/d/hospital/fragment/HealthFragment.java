@@ -11,6 +11,7 @@ import d.hospital.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ * 健康商城
  */
 public class HealthFragment extends Fragment {
 

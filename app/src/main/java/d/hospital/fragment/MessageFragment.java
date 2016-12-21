@@ -11,6 +11,7 @@ import d.hospital.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ * 消息页面
  */
 public class MessageFragment extends Fragment {
 

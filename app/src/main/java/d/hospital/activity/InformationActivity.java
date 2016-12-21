@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import d.hospital.R;
 import de.hdodenhof.circleimageview.CircleImageView;
-
+/**
+ * 个人信息页面
+ * */
 public class InformationActivity extends Activity implements View.OnClickListener{
 
     private TextView finish_title;

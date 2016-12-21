@@ -1,13 +1,197 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0EFF5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="d.hospital.fragment.InquiryFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <include
+        layout="@layout/layout_title"
+        android:id="@+id/include6"></include>
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="问诊" />
+        android:layout_below="@+id/include6"
+        android:id="@+id/scrollView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#C4EB45"
+                app:image_scale_type="fit_xy"
+                android:layout_alignParentStart="true" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@mipmap/seek_bk"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_below="@+id/banner"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout12">
+                <ImageView
+                    android:id="@+id/hunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:src="@mipmap/hunt"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_hunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="搜疾病、药品、医生、科室"
+                    android:textSize="@dimen/textview_normal"
+                    android:textColor="@color/text_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/hunt" />
+            </RelativeLayout>
+            <d.hospital.view.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:numColumns="4"
+                android:padding="5dp"
+                android:horizontalSpacing="1pt"
+                android:verticalSpacing="1pt"
+                android:gravity="center"
+                android:layout_below="@+id/relativeLayout12">
+            </d.hospital.view.MyGridView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/line1"
+                android:layout_below="@+id/gridview">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/biankuang_bottom"
+                    android:layout_height="40dp">
 
-</FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="营养科"
+                        android:layout_margin="10dp"
+                        android:id="@+id/textView23"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全部"
+                        android:id="@+id/textView24"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="36dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView18"
+                        android:background="@mipmap/hui"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp" />
+                </RelativeLayout>
+
+
+                   <HorizontalScrollView
+                       android:layout_width="match_parent"
+                       android:layout_height="100dp">
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="fill_parent"
+                           android:layout_margin="10dp" >
+
+                           <d.hospital.view.MyGridView
+                               android:id="@+id/grid"
+                               android:layout_width="fill_parent"
+                               android:layout_height="fill_parent"
+                               android:gravity="center"
+                               android:numColumns="auto_fit"
+                               android:stretchMode="spacingWidthUniform" >
+                           </d.hospital.view.MyGridView>
+                       </LinearLayout>
+
+
+                   </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:id="@+id/line2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:layout_below="@+id/line1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/biankuang_bottom"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="眼科"
+                        android:layout_margin="10dp"
+                        android:id="@+id/textView2"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全部"
+                        android:id="@+id/textView3"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="36dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView1"
+                        android:background="@mipmap/hui"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp" />
+                </RelativeLayout>
+
+                <d.hospital.view.HorizontalListView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    android:id="@+id/horizontallistview1"
+                    >
+                </d.hospital.view.HorizontalListView>
+            </LinearLayout>
+            <include
+                layout="@layout/layout_imag"
+                android:layout_below="@id/line2"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

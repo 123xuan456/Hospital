@@ -8,4 +8,5 @@
     <color name="text_blue">#137cb9</color>
     <color name="text_gray">#b2b2b2</color>
     <color name="white_bg">#ffffff</color>
+    <color name="text_black">#333333</color>
 </resources>
