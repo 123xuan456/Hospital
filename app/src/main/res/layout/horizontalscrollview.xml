@@ -3,18 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
     tools:context="d.hospital.MainActivity"
     >
-
-
-
-            <d.hospital.view.HorizontalListView
-                android:id="@+id/listview"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
               >
-
-            </d.hospital.view.HorizontalListView>
+            </android.support.v7.widget.RecyclerView>
 
 
 </RelativeLayout>
