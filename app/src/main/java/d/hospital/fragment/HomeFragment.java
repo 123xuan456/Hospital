@@ -24,12 +24,9 @@ import java.util.List;
 
 import d.hospital.BaseFragment;
 import d.hospital.R;
-<<<<<<< HEAD
 import d.hospital.adapter.GalleryAdapter;
 import d.hospital.adapter.ImageAdapter;
-=======
 import d.hospital.activity.MineActivity;
->>>>>>> 088fbb561d89a6b5562657457e89a6238692bb58
 import d.hospital.bean.Home_moduleBean;
 import d.hospital.utils.UrlUtils;
 import okhttp3.Call;
@@ -39,7 +36,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
     private ImageView area1_big1,area1_little11,area1_little21,area1_little31,area1_little41;
     private ImageView area2_big2,area2_little12,area2_little22,area2_little32,area2_little42;
     private View view;
-<<<<<<< HEAD
     private RecyclerView mRecyclerView;
     private GalleryAdapter mAdapter;
     private List<String> mDatas;
@@ -54,9 +50,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
         }
     };
 
-=======
     private ImageView iv_user;//我的
->>>>>>> 088fbb561d89a6b5562657457e89a6238692bb58
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -31,4 +31,5 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.5'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.lzy.net:okgo:+'
+    compile 'com.android.support:recyclerview-v7:23.+'
 }
