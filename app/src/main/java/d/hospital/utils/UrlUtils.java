@@ -14,6 +14,8 @@ public class UrlUtils {
  public static String INQUIRY_PIC=BASEURL+"askDoctor/pic";
     //问诊页面科室
  public static String INQUIRY_KESHI=BASEURL+"askDoctor/allDoctorClass";
+    //问诊页面详情
+ public static String INQUIRY_XIANGQING=BASEURL+"askDoctor/classForDoctor?classId=";
     //问诊页面分科
  public static String INQUIRY_FENKE=BASEURL+"askDoctor/showDoctor";
 

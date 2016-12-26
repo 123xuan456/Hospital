@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:background="#FFFFFF"
+        android:id="@+id/relativeLayout2">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/c"
+            android:layout_margin="10dp"
+            android:id="@+id/view" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/relativeLayout"
+            android:layout_toEndOf="@+id/view"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="猪八戒"
+                android:id="@+id/name"
+                android:textSize="16sp"
+                android:textColor="#323232"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView28" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="得扑认证医生"
+                android:textSize="13sp"
+                android:textColor="#646464"
+                android:paddingTop="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="擅长："
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:id="@+id/textView3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ]"
+                android:id="@+id/textView29"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ "
+                android:id="@+id/textView28"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="是尼克斯能看到烦恼盛开的减肥你就爱看你发科技三呢打算地阿娇丢按时到敬爱碎大石"
+                android:id="@+id/textView30"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_toEndOf="@+id/name" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

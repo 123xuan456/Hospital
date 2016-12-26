@@ -2,6 +2,7 @@ package d.hospital.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -27,7 +27,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import d.hospital.BaseFragment;
 import d.hospital.R;
+import d.hospital.activity.Inquiry_KeShiActivity;
+import d.hospital.activity.Inquiry_XiangqingActivity;
 import d.hospital.adapter.Inquiry_ErKeAdapter;
 import d.hospital.adapter.Inquiry_FuCanAdapter;
 import d.hospital.bean.Inquiry_fenkeBean;
@@ -44,7 +47,7 @@ import okhttp3.Response;
  * A simple {@link Fragment} subclass.
  * 问诊页面
  */
-public class InquiryFragment extends Fragment implements AdapterView.OnItemClickListener{
+public class InquiryFragment extends BaseFragment {
 
     Context context;
     View view;
@@ -56,6 +59,8 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
     private ImageView img2;
     private ImageView img3;
     MyGridView gridView;
+    private List<Inquiry_keshiBean.MessageBean> message;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,13 +75,12 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
         img2= (ImageView) view.findViewById(R.id.image2);
         img3= (ImageView) view.findViewById(R.id.image3);
 
-         banner = (Banner) view.findViewById(R.id.banner);
+        banner = (Banner) view.findViewById(R.id.banner);
         carousel();//轮播图
         gridview1=(MyGridView)view.findViewById(R.id.gridview);
         keshi();//科室
-        gridview1.setOnItemClickListener(this);
 
-       // horizontalListView= (HorizontalListView) view.findViewById(R.id.horizontallistview);
+        // horizontalListView= (HorizontalListView) view.findViewById(R.id.horizontallistview);
         horizontalListView1= (HorizontalListView) view.findViewById(R.id.horizontallistview1);
         fenke();//
         gridView = (MyGridView) view.findViewById(R.id.grid);
@@ -112,7 +116,7 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
         OkGo.get(UrlUtils.INQUIRY_FENKE)
                 .tag(this)
                 .cacheKey("inquiry_fenke")
-                .cacheMode(CacheMode.DEFAULT)
+                .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -125,8 +129,11 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
                         //儿科
                         List<Inquiry_fenkeBean.Message1Bean> mes1 = fen.getMessage1();
                         setGridView(mes1);
-//                        Inquiry_PediatricsAdapter adapter=new Inquiry_PediatricsAdapter(getActivity(),mes1);
-//                        horizontalListView.setAdapter(adapter);
+//                        Inquiry_ErKeAdapter adapter = new Inquiry_ErKeAdapter(getContext(),
+//                                mes1);
+//                        gridView.setAdapter(adapter);
+                        //  Inquiry_PediatricsAdapter adapter=new Inquiry_PediatricsAdapter(getActivity(),mes1);
+                        // horizontalListView.setAdapter(adapter);
                         //妇产科
 
                         List<Inquiry_fenkeBean.Message2Bean> mes2 = fen.getMessage2();
@@ -150,7 +157,7 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
         OkGo.get(UrlUtils.INQUIRY_KESHI)
                 .tag(this)
                 .cacheKey("inquiry_keshi")
-                .cacheMode(CacheMode.DEFAULT)
+                .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -166,7 +173,7 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
                     private void json(String s) {
                         Gson gson=new Gson();
                         Inquiry_keshiBean ke = gson.fromJson(s, Inquiry_keshiBean.class);
-                        List<Inquiry_keshiBean.MessageBean> message = ke.getMessage();
+                         message = ke.getMessage();
                         MyAdapter adapter=new MyAdapter(message);
                         gridview1.setAdapter(adapter);
                     }
@@ -182,12 +189,17 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
         banner.startAutoPlay();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        banner.stopAutoPlay();
+    }
 
     public void carousel() {
         OkGo.get(UrlUtils.INQUIRY_PIC)// 请求方式和请求url
                 .tag(this)                       // 请求的 tag, 主要用于取消对应的请求
                 .cacheKey("inquiry_pic")            // 设置当前请求的缓存key,建议每个不同功能的请求设置一个
-                .cacheMode(CacheMode.DEFAULT)    // 按照HTTP协议的默认缓存规则，例如有304响应头时缓存。
+                .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)    // 缓存
                 .execute(new StringCallback() {
                     public Inquiry_picBean Area1Bean;
                     public Inquiry_picBean Area2Bean;
@@ -225,8 +237,6 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
                         com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(image1.getArea2_left2(), img2);
                         com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(image1.getArea2_right(), img3);
 
-
-
                     }
 
                     @Override
@@ -238,16 +248,14 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
                 });
     }
 
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-
-    }
-
+    /**
+     * 科室分类
+     * 判断了显示的科室名，在最后的位置显示更多
+     * 进行了点击事件
+     *
+     */
     class MyAdapter extends BaseAdapter{
-            private List<Inquiry_keshiBean.MessageBean> message;
+        private List<Inquiry_keshiBean.MessageBean> message;
         public MyAdapter(List<Inquiry_keshiBean.MessageBean> message) {
             this.message=message;
 
@@ -259,7 +267,7 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
             if (message.size()>12){
                 return 12;
             }
-                return message.size();
+            return message.size();
         }
 
         @Override
@@ -273,22 +281,60 @@ public class InquiryFragment extends Fragment implements AdapterView.OnItemClick
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             convertView=LayoutInflater.from(getActivity()).inflate(R.layout.item_gridview_inquiry,null);
             TextView tv= (TextView) convertView.findViewById(R.id.textView22);
+
             if (message.size()>=12){
-           message.get(11).setClassName("更多");
+                message.get(11).setClassName("更多");
                 String name = message.get(position).getClassName();
                 if (name.equals("更多")){
                     tv.setTextColor(ContextCompat.getColor(getContext(),R.color.text_blue));
-                }
-            tv.setText(name);
+                    tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i=new Intent(getActivity(), Inquiry_KeShiActivity.class);
+                            i.putExtra("id",message.get(position).getClassName());
+                            startActivity(i);
+                        }
+                    });
+                }else if (!name.equals("更多"))
+                    tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            int id=message.get(position).getClassId();
+                            Intent i=new Intent(getActivity(),Inquiry_XiangqingActivity.class);
+                            i.putExtra("id",id);
+                            i.putExtra("name",message.get(position).getClassName());
+                            startActivity(i);
+                        }
+                    });
+                tv.setText(name);
+
             }else if (message.size()<12){
                 message.get(position-1).setClassName("更多");
                 String name = message.get(position).getClassName();
                 if (name.equals("更多")){
                     tv.setTextColor(ContextCompat.getColor(getContext(),R.color.text_blue));
-                }
+                    tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i=new Intent(getActivity(), Inquiry_KeShiActivity.class);
+                            i.putExtra("id",message.get(position).getClassName());
+                            startActivity(i);
+                        }
+                    });
+                }else if (!name.equals("更多"))
+                    tv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            int id=message.get(position).getClassId();
+                            Intent i=new Intent(getActivity(),Inquiry_XiangqingActivity.class);
+                            i.putExtra("id",id);
+                            i.putExtra("name",message.get(position).getClassName());
+                            startActivity(i);
+                        }
+                    });
                 tv.setText(name);
             }
 
