@@ -15,6 +15,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -58,6 +59,10 @@ public class InquiryFragment extends BaseFragment {
     private ImageView img1;
     private ImageView img2;
     private ImageView img3;
+    private TextView textView23;
+    private TextView textView2;
+    private RelativeLayout relativeLayout1;
+    private RelativeLayout relativeLayout2;
     MyGridView gridView;
     private List<Inquiry_keshiBean.MessageBean> message;
 
@@ -74,6 +79,12 @@ public class InquiryFragment extends BaseFragment {
         img1= (ImageView) view.findViewById(R.id.image1);
         img2= (ImageView) view.findViewById(R.id.image2);
         img3= (ImageView) view.findViewById(R.id.image3);
+        textView23= (TextView) view.findViewById(R.id.textView23);
+        textView2= (TextView) view.findViewById(R.id.textView2);
+        relativeLayout1= (RelativeLayout) view.findViewById(R.id.relativeLayout1);
+
+        relativeLayout2= (RelativeLayout) view.findViewById(R.id.relativeLayout2);
+
 
         banner = (Banner) view.findViewById(R.id.banner);
         carousel();//轮播图
@@ -127,7 +138,17 @@ public class InquiryFragment extends BaseFragment {
                         Gson gson = new Gson();
                         Inquiry_fenkeBean fen = gson.fromJson(s, Inquiry_fenkeBean.class);
                         //儿科
-                        List<Inquiry_fenkeBean.Message1Bean> mes1 = fen.getMessage1();
+                        final List<Inquiry_fenkeBean.Message1Bean> mes1 = fen.getMessage1();
+                        textView23.setText(mes1.get(1).getClassName());
+                        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent i=new Intent(getActivity(),Inquiry_XiangqingActivity.class);
+                                i.putExtra("id",mes1.get(1).getClassId());
+                                i.putExtra("name",mes1.get(1).getClassName());
+                                startActivity(i);
+                            }
+                        });
                         setGridView(mes1);
 //                        Inquiry_ErKeAdapter adapter = new Inquiry_ErKeAdapter(getContext(),
 //                                mes1);
@@ -136,7 +157,17 @@ public class InquiryFragment extends BaseFragment {
                         // horizontalListView.setAdapter(adapter);
                         //妇产科
 
-                        List<Inquiry_fenkeBean.Message2Bean> mes2 = fen.getMessage2();
+                        final List<Inquiry_fenkeBean.Message2Bean> mes2 = fen.getMessage2();
+                        textView2.setText(mes2.get(1).getClassName());
+                        relativeLayout2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent i=new Intent(getActivity(),Inquiry_XiangqingActivity.class);
+                                i.putExtra("id",mes2.get(1).getClassId());
+                                i.putExtra("name",mes2.get(1).getClassName());
+                                startActivity(i);
+                            }
+                        });
                         Inquiry_FuCanAdapter adapter1=new Inquiry_FuCanAdapter(getActivity(),mes2);
                         horizontalListView1.setAdapter(adapter1);
 
@@ -173,7 +204,7 @@ public class InquiryFragment extends BaseFragment {
                     private void json(String s) {
                         Gson gson=new Gson();
                         Inquiry_keshiBean ke = gson.fromJson(s, Inquiry_keshiBean.class);
-                         message = ke.getMessage();
+                        message = ke.getMessage();
                         MyAdapter adapter=new MyAdapter(message);
                         gridview1.setAdapter(adapter);
                     }
@@ -188,9 +219,8 @@ public class InquiryFragment extends BaseFragment {
         super.onStart();
         banner.startAutoPlay();
     }
-
     @Override
-    public void onStop() {
+    public void onStop()    {
         super.onStop();
         banner.stopAutoPlay();
     }

@@ -18,12 +18,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by de on 2016/12/20.
  */
 public class Inquiry_FuCanAdapter extends BaseAdapter{
-        private Context context;
-        private  List<Inquiry_fenkeBean.Message2Bean> mes2;
+    private Context context;
+    private  List<Inquiry_fenkeBean.Message2Bean> mes2;
 
     public Inquiry_FuCanAdapter(Context context,  List<Inquiry_fenkeBean.Message2Bean> mes2) {
-            this.context=context;
-            this.mes2=mes2;
+        this.context=context;
+        this.mes2=mes2;
     }
 
     @Override
@@ -43,24 +43,24 @@ public class Inquiry_FuCanAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder;
-            if (convertView==null){
-                holder=new ViewHolder();
-                convertView= LayoutInflater.from(context).inflate(R.layout.item_fenke,null);
-                RelativeLayout.LayoutParams a = (RelativeLayout.LayoutParams) convertView.getLayoutParams();
-                holder.iv= (CircleImageView) convertView.findViewById(R.id.imageView20);
-                holder.tv1= (TextView) convertView.findViewById(R.id.textView25);
-                holder.tv2= (TextView) convertView.findViewById(R.id.textView26);
-                convertView.setTag(holder);
+        ViewHolder holder;
+        if (convertView==null){
+            holder=new ViewHolder();
+            convertView= LayoutInflater.from(context).inflate(R.layout.item_fenke,null);
+            RelativeLayout.LayoutParams a = (RelativeLayout.LayoutParams) convertView.getLayoutParams();
+            holder.iv= (CircleImageView) convertView.findViewById(R.id.imageView20);
+            holder.tv1= (TextView) convertView.findViewById(R.id.textView25);
+            holder.tv2= (TextView) convertView.findViewById(R.id.textView26);
+            convertView.setTag(holder);
 
-            }else {
-                holder= (ViewHolder) convertView.getTag();
-            }
-            Inquiry_fenkeBean.Message2Bean m = mes2.get(position);
-            com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(m.getDoctorPic(), holder.iv);
+        }else {
+            holder= (ViewHolder) convertView.getTag();
+        }
+        Inquiry_fenkeBean.Message2Bean m = mes2.get(position);
+        com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(m.getDoctorPic(), holder.iv);
         holder.tv1.setText(m.getDoctorName());
         holder.tv2.setText(m.getClassName());
-            return convertView;
+        return convertView;
     }
 
     class ViewHolder{

@@ -24,9 +24,10 @@ import java.util.List;
 
 import d.hospital.BaseFragment;
 import d.hospital.R;
+import d.hospital.activity.CommonScanActivity;
+import d.hospital.activity.MineActivity;
 import d.hospital.adapter.GalleryAdapter;
 import d.hospital.adapter.ImageAdapter;
-import d.hospital.activity.MineActivity;
 import d.hospital.bean.Home_moduleBean;
 import d.hospital.utils.UrlUtils;
 import okhttp3.Call;
@@ -35,6 +36,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
 
     private ImageView area1_big1,area1_little11,area1_little21,area1_little31,area1_little41;
     private ImageView area2_big2,area2_little12,area2_little22,area2_little32,area2_little42;
+    private ImageView iv_scan;
     private View view;
     private RecyclerView mRecyclerView;
     private GalleryAdapter mAdapter;
@@ -78,7 +80,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
         area2_little22 = (ImageView)view.findViewById(R.id.area2_little2);
         area2_little32 = (ImageView)view.findViewById(R.id.area2_little3);
         area2_little42 = (ImageView)view.findViewById(R.id.area2_little4);
-
+        //扫描二维码
+        iv_scan=(ImageView)view.findViewById(R.id.iv_scan);
+        iv_scan.setOnClickListener(this);
         dot_layout = (LinearLayout)view.findViewById(R.id.dot_layout);
 
         mRecyclerView = (RecyclerView)view.findViewById(R.id.mRecyclerView);
@@ -214,6 +218,12 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
             case R.id.iv_user:
                 Intent intent = new Intent(getActivity(),MineActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.iv_scan:
+                Intent intent1 = new Intent(getActivity(),CommonScanActivity.class);
+                //intent1.putExtra(Constant.REQUEST_SCAN_MODE,Constant.REQUEST_SCAN_MODE_ALL_MODE);
+                startActivity(intent1);
+
                 break;
 
 
