@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
@@ -49,6 +50,7 @@ public class Inquiry_KeShiActivity extends Activity implements View.OnClickListe
                 i.putExtra("id",id);
                 i.putExtra("name",message.get(position).getClassName());
                 startActivity(i);
+                Glide.with(getApplicationContext()).load(id+"").thumbnail(0.1f).into(finish_fanhui);
             }
         });
 
@@ -81,8 +83,6 @@ public class Inquiry_KeShiActivity extends Activity implements View.OnClickListe
                         MyAdapter adapter=new MyAdapter(message);
                         listView.setAdapter(adapter);
                     }
-
-
                 });
 
 
@@ -133,7 +133,5 @@ public class Inquiry_KeShiActivity extends Activity implements View.OnClickListe
             tv.setText(name);
             return convertView;
         }
-
     }
-
 }

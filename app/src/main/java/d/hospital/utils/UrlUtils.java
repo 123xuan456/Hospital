@@ -7,6 +7,7 @@ package d.hospital.utils;
 public class UrlUtils {
 
   public static String BASEURL=" http://192.168.0.56:8080/";//本地测试
+  public static String BASEURL1="http://192.168.0.43:8080/";//本地测试
 
 
  public static String HOME_UP_MODULE=BASEURL+"home/homepiclist";
@@ -18,6 +19,11 @@ public class UrlUtils {
  public static String INQUIRY_XIANGQING=BASEURL+"askDoctor/classForDoctor?classId=";
     //问诊页面分科
  public static String INQUIRY_FENKE=BASEURL+"askDoctor/showDoctor";
+    //健康圈上标
+ public static String HEALTH_CIRCLE_TAB=BASEURL1+"SafetyDoctor/healthheadlines/selectHealthheadlinestitle";
+    //健康圈
+ public static String HEALTH_CIRCLE=BASEURL1+"SafetyDoctor/healthheadlines/selectconditionHealthheadlines?id=";
+
 
 
 }

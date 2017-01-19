@@ -1,11 +1,15 @@
 package d.hospital.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -36,16 +40,16 @@ public class Inquiry_XiangqingActivity extends Activity implements View.OnClickL
     private SwipeRefreshLayout refreshLayout;
     private Inquiry_XiangqingAdapter adapter;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_inquiry__xiangqing);
-             refreshLayout=(SwipeRefreshLayout)findViewById(R.id.refreshLayout);
-            listview=(ListView)findViewById(R.id.listview);
-            Intent i=getIntent();
-            id=i.getIntExtra("id",0);
-            name=i.getStringExtra("name");
-            System.out.println("id="+id);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_inquiry__xiangqing);
+        refreshLayout=(SwipeRefreshLayout)findViewById(R.id.refreshLayout);
+        listview=(ListView)findViewById(R.id.listview);
+        Intent i=getIntent();
+        id=i.getIntExtra("id",0);
+        name=i.getStringExtra("name");
+        System.out.println("id="+id);
         System.out.println("name="+name);
         finish_title=(TextView)findViewById(R.id.finish_title);
         finish_title.setText(name);
@@ -67,6 +71,17 @@ public class Inquiry_XiangqingActivity extends Activity implements View.OnClickL
         });
 
     }
+
+    @Override
+    public Context createDisplayContext(Display display) {
+        return super.createDisplayContext(display);
+    }
+
+    @Override
+    public Context createPackageContext(String packageName, int flags) throws PackageManager.NameNotFoundException {
+        return super.createPackageContext(packageName, flags);
+    }
+
 
     private Handler mHandler =new Handler(){
         @Override
@@ -103,10 +118,9 @@ public class Inquiry_XiangqingActivity extends Activity implements View.OnClickL
                             listview.setAdapter(adapter);
                         }else {
                             System.out.println("有问题啦");
+                            Log.i("","");
                             Toast.makeText(getApplicationContext(),inquiry_xiangqingBean.getCode()+"",Toast.LENGTH_SHORT).show();
                         }
-
-
                     }
                 });
 

@@ -64,8 +64,8 @@ public class ScanManager implements SurfaceHolder.Callback{
 	 * @param scanContainer  扫描的布局，全屏布局
 	 * @param scanCropView  扫描的矩形区域
 	 * @param scanLine  扫描线
-	 * 
-	 * 
+	 *
+	 *
 	 */
 	public ScanManager(Activity activity,SurfaceView scanPreview,View scanContainer,
 			View scanCropView,ImageView scanLine,int scanMode,ScanListener listener) {

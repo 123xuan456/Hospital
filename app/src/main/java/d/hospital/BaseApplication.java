@@ -9,7 +9,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 /**
  * Created by de on 2016/12/19.
  */
-public class BaseApp extends Application{
+public class BaseApplication extends Application{
 
     @Override
     public void onCreate() {

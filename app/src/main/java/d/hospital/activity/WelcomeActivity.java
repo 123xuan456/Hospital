@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import d.hospital.MainActivity;
 import d.hospital.R;
 
-public class LoginActivity extends Activity {
+public class WelcomeActivity extends Activity {
 
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
@@ -49,7 +49,7 @@ public class LoginActivity extends Activity {
                 // TODO Auto-generated method stub
                 if (time) {
                     //第二次打开时
-                    Intent intent_main = new Intent(LoginActivity.this,
+                    Intent intent_main = new Intent(WelcomeActivity.this,
                             MainActivity.class);
                     startActivity(intent_main);
                     finish();
@@ -57,7 +57,7 @@ public class LoginActivity extends Activity {
                     //第一次安装打开
                     editor.putBoolean("time", true);
                     editor.commit();
-                    Intent intent_guide = new Intent(LoginActivity.this,
+                    Intent intent_guide = new Intent(WelcomeActivity.this,
                             MineActivity.class);
                     startActivity(intent_guide);
                     finish();
