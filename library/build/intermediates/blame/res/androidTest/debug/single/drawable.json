@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\loading.xml",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\loading.xml"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\progress_loading_image_02.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\progress_loading_image_02.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\run1.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\run1.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\guoqi.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\guoqi.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\progress_loading_image_01.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\progress_loading_image_01.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\app_loading1.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\app_loading1.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\app_loading0.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\app_loading0.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\run0.png",
+        "source": "D:\\Hospital\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\run0.png"
+    }
+]
