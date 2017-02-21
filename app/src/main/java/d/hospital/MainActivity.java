@@ -15,6 +15,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
 
     private RadioGroup radioGroup;
     private Fragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment, new HomeFragment()).commit();
         }
+
     }
 
     @Override

@@ -19,6 +19,7 @@ import com.handmark.pulltorefresh.library.extras.SoundPullEventListener;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.callback.StringCallback;
+import com.lzy.okgo.request.BaseRequest;
 
 import java.util.List;
 
@@ -107,18 +108,28 @@ public class BlankFragment extends Fragment {
     private void loading() {
         Log.d("BlankFragment", "id="+id+"");
         OkGo.get(UrlUtils.HEALTH_CIRCLE+id).
-                cacheMode(CacheMode.REQUEST_FAILED_READ_CACHE).
+                cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST).
                 cacheKey("HEALTH_CIRCLE").tag(this)
                 .execute(new StringCallback() {
-
                     @Override
-                    public void onSuccess(String s, Call call, Response response) {
-                        json(s);
+                    public void onBefore(BaseRequest request) {
+                        super.onBefore(request);
+
                     }
 
                     @Override
                     public void onCacheSuccess(String s, Call call) {
                         super.onCacheSuccess(s, call);
+                         json(s);
+                    }
+
+                    @Override
+                    public String convertSuccess(Response response) throws Exception {
+                        return super.convertSuccess(response);
+                    }
+
+                    @Override
+                    public void onSuccess(String s, Call call, Response response) {
                         json(s);
                     }
 
@@ -131,7 +142,8 @@ public class BlankFragment extends Fragment {
                             mPullRefreshListView.setAdapter(adapter);
                             mPullRefreshListView.onRefreshComplete();
                         }else if (a.getCode()==400){
-                            //Toast.makeText(getActivity(), "没有数据", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "没有数据", Toast.LENGTH_SHORT).show();
+                            mPullRefreshListView.onRefreshComplete();
                         }
                     }
                 });

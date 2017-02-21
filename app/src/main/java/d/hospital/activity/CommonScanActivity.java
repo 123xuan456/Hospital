@@ -155,7 +155,11 @@ public class CommonScanActivity extends Activity implements ScanListener, View.O
         rescan.setVisibility(View.VISIBLE);
         scan_image.setVisibility(View.VISIBLE);
         tv_scan_result.setVisibility(View.VISIBLE);
-        tv_scan_result.setText("结果："+rawResult.getText());
+       // tv_scan_result.setText("结果："+rawResult.getText());
+        Intent i = new Intent(this,WebActivity.class);
+        i.putExtra("raw",rawResult.getText().toString());
+        startActivity(i);
+
     }
 
     @Override

@@ -18,9 +18,9 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -40,7 +40,15 @@
         <activity android:name=".activity.Inquiry_KeShiActivity" />
         <activity android:name=".activity.WelcomeActivity" />
         <activity android:name=".activity.Inquiry_XiangqingActivity" />
-        <activity android:name=".activity.CommonScanActivity"></activity>
+        <activity android:name=".activity.CommonScanActivity" />
+
+        <receiver android:name=".receiver.NetReceiver">
+            <intent-filter>
+                <action android:name="ConnectivityManager.CONNECTIVITY_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.WebActivity"></activity>
     </application>
 
 </manifest>

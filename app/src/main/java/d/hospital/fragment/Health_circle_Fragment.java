@@ -71,7 +71,6 @@ public class Health_circle_Fragment extends Fragment implements ViewPager.OnPage
             });
 
             initTab(inflater);
-            // initViewpager();
         }
         ViewGroup parent=(ViewGroup)view.getParent();
         if(parent!=null){
