@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="d.hospital.fragment.HealthFragment">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="d.hospital.fragment.HealthFragment">
     <include
         layout="@layout/rl_titlebar_1"
         />
@@ -26,11 +26,11 @@
 
         </HorizontalScrollView>
         <ImageView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ivShowChannel"
-            android:layout_alignParentRight="true"
-            android:background="@mipmap/xiangxia"
-            android:scaleType="fitXY"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/ivShowChannel"
+                   android:layout_alignParentRight="true"
+                   android:background="@mipmap/xiangxia"
+                   android:scaleType="fitXY"
             />
     </RelativeLayout>
     <View

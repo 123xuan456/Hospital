@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/white_bg"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    <TextView
+    android:id="@+id/step_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="记经期"
+    android:textSize="@dimen/textview_normal"
+    android:textColor="@color/text_gray"
+    android:layout_marginLeft="16dp"
+    android:gravity="center_vertical"
+    />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12345678"
+            android:textSize="@dimen/textview_gray"
+            android:textColor="@color/text_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/step_tv"
+            android:visibility="gone"
+            />
+        
+        <ImageView
+            android:id="@+id/iv_fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/fanhui"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/text_gray"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/iv_fanhui" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完善初始化数据，更好为你准备预测"
+                android:id="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖励200健康点"
+                android:id="@+id/textView1"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/yuantext"
+                android:layout_below="@+id/textView1"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始使用吧"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/brilliant_blue"
+                    android:id="@+id/textView4"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/textView21"
+                android:layout_above="@+id/textView23"
+                android:layout_alignParentTop="true"
+                android:visibility="visible"
+                android:id="@+id/relativeLayout14">
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@mipmap/yuan1"
+                android:id="@+id/relativeLayout13"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 Wed"
+                    android:textColor="@color/white_bg"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/white_bg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="月经期"
+                    android:textColor="@color/white_bg"/>
+
+
+            </LinearLayout>
+
+
+
+            </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12月14日-12月18日"
+            android:textColor="@color/colorAccent"
+                android:id="@+id/textView21"
+                android:layout_above="@+id/textView22"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天是月经第1天"
+                android:textColor="@color/text_gray"
+                android:id="@+id/textView22"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:layout_toEndOf="@+id/relativeLayout14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小贴士：痛经、月经不调怎么破？"
+                android:textColor="@color/text_gray"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible"
+                android:id="@+id/textView23" />
+
+        </RelativeLayout>
+</LinearLayout>

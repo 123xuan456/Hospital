@@ -6,4 +6,5 @@
     <dimen name="title_bg_height">47dp</dimen>
     <dimen name="textview_gray">12dp</dimen>//小一点的字体的大小，一般用于灰色的字体的大小
     <dimen name="textview_normal">14dp</dimen>//正常的字体的大小
+    <dimen name="textview_little">9sp</dimen>//小字体，用于控件上的字体
 </resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/headview"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#22292C"
+        >
+        <Button
+            android:textColor="#fff"
+            android:id="@+id/gallery_back"
+            android:text="返回"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:textSize="14sp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            />
+        <Button
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:id="@+id/gallery_del"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:text="删除"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+    
+    <d.hospital.imageUtils.ViewPagerFixed
+      android:id="@+id/viewpager"
+      android:layout_width="fill_parent" 
+      android:layout_height="wrap_content"
+      android:unselectedAlpha="1">
+   	</d.hospital.imageUtils.ViewPagerFixed>
+   
+</LinearLayout>
+  

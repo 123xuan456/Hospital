@@ -4,10 +4,86 @@
     android:layout_height="match_parent"
     tools:context="d.hospital.fragment.HealthFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="健康商城" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:background="@color/bg_gray"
+                  tools:context="d.hospital.fragment.HealthFragment">
+
+        <include
+            layout="@layout/rl_titlebar"
+            />
+        <d.hospital.view.ScrollViewExtend
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <include
+                    layout="@layout/home_pager"
+                    />
+                <include
+                    layout="@layout/health_gridview"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@color/white_bg">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:background="@mipmap/juxing"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_bt_in"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="头 条"
+                            android:layout_margin="1dp"
+                            android:gravity="center"
+                            android:textColor="@color/brilliant_blue"
+                            />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_little_advertisement"
+                        android:layout_width="0dp"
+                        android:layout_weight="7"
+                        android:layout_marginLeft="7dp"
+                        android:layout_height="wrap_content"
+                        android:text="肾宝片减30再送煮蛋神奇"
+                        android:textSize="@dimen/textview_gray"
+                        />
+
+                </LinearLayout>
+                <include
+                    layout="@layout/home_module2"
+                    />
+                <include
+                    layout="@layout/baselistview"
+                    />
+
+            </LinearLayout>
+        </d.hospital.view.ScrollViewExtend>
+    </LinearLayout>
+
 
 </FrameLayout>

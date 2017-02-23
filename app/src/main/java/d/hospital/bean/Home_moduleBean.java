@@ -1,104 +1,134 @@
 package d.hospital.bean;
 
 
+import java.util.List;
+
 public class Home_moduleBean {
-    private String area1_big;
-    private String area1_little1;
-    private String area1_little2;
-    private String area1_little3;
-    private String area1_little4;
-    private String area2_big;
-    private String area2_little1;
-    private String area2_little2;
-    private String area2_little3;
-    private String area2_little4;
     private int code;
 
-    public String getArea1_big() {
-        return area1_big;
-    }
+    private String healthNews;
 
-    public void setArea1_big(String area1_big) {
-        this.area1_big = area1_big;
-    }
+    private List<Area1> area1 ;
 
-    public String getArea1_little1() {
-        return area1_little1;
-    }
+    private List<Area2> area2 ;
 
-    public void setArea1_little1(String area1_little1) {
-        this.area1_little1 = area1_little1;
-    }
+    private List<Area3> area3 ;
 
-    public String getArea1_little2() {
-        return area1_little2;
-    }
+    private List<Area4> area4 ;
 
-    public void setArea1_little2(String area1_little2) {
-        this.area1_little2 = area1_little2;
-    }
+    private List<HealthTest> healthTest ;
 
-    public String getArea1_little3() {
-        return area1_little3;
-    }
-
-    public void setArea1_little3(String area1_little3) {
-        this.area1_little3 = area1_little3;
-    }
-
-    public String getArea1_little4() {
-        return area1_little4;
-    }
-
-    public void setArea1_little4(String area1_little4) {
-        this.area1_little4 = area1_little4;
-    }
-
-    public String getArea2_big() {
-        return area2_big;
-    }
-
-    public void setArea2_big(String area2_big) {
-        this.area2_big = area2_big;
-    }
-
-    public String getArea2_little1() {
-        return area2_little1;
-    }
-
-    public void setArea2_little1(String area2_little1) {
-        this.area2_little1 = area2_little1;
-    }
-
-    public String getArea2_little2() {
-        return area2_little2;
-    }
-
-    public void setArea2_little2(String area2_little2) {
-        this.area2_little2 = area2_little2;
-    }
-
-    public String getArea2_little3() {
-        return area2_little3;
-    }
-
-    public void setArea2_little3(String area2_little3) {
-        this.area2_little3 = area2_little3;
-    }
-
-    public String getArea2_little4() {
-        return area2_little4;
-    }
-
-    public void setArea2_little4(String area2_little4) {
-        this.area2_little4 = area2_little4;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
+    public void setCode(int code){
         this.code = code;
     }
+    public int getCode(){
+        return this.code;
+    }
+    public void setHealthNews(String healthNews){
+        this.healthNews = healthNews;
+    }
+    public String getHealthNews(){
+        return this.healthNews;
+    }
+    public void setArea1(List<Area1> area1){
+        this.area1 = area1;
+    }
+    public List<Area1> getArea1(){
+        return this.area1;
+    }
+    public void setArea2(List<Area2> area2){
+        this.area2 = area2;
+    }
+    public List<Area2> getArea2(){
+        return this.area2;
+    }
+    public void setArea3(List<Area3> area3){
+        this.area3 = area3;
+    }
+    public List<Area3> getArea3(){
+        return this.area3;
+    }
+    public void setArea4(List<Area4> area4){
+        this.area4 = area4;
+    }
+    public List<Area4> getArea4(){
+        return this.area4;
+    }
+    public void setHealthTest(List<HealthTest> healthTest){
+        this.healthTest = healthTest;
+    }
+    public List<HealthTest> getHealthTest(){
+        return this.healthTest;
+    }
+
+    public class HealthTest {
+        private String healthtest_1;
+
+        private String healthtest_2;
+
+        public void setHealthtest_1(String healthtest_1){
+            this.healthtest_1 = healthtest_1;
+        }
+        public String getHealthtest_1(){
+            return this.healthtest_1;
+        }
+        public void setHealthtest_2(String healthtest_2){
+            this.healthtest_2 = healthtest_2;
+        }
+        public String getHealthtest_2(){
+            return this.healthtest_2;
+        }
+
+    }
+
+    public class Area4 {
+        private String picUrl4;
+
+        public void setPicUrl4(String picUrl4){
+            this.picUrl4 = picUrl4;
+        }
+        public String getPicUrl4(){
+            return this.picUrl4;
+        }
+
+    }
+
+    public class Area3 {
+        private String picUrl3;
+
+
+        public void setPicUrl3(String picUrl3){
+            this.picUrl3 = picUrl3;
+        }
+        public String getPicUrl3(){
+            return this.picUrl3;
+        }
+
+
+    }
+
+    public class Area2 {
+        private String picUrl2;
+
+        public void setPicUrl2(String picUrl2){
+            this.picUrl2 = picUrl2;
+        }
+        public String getPicUrl2(){
+            return this.picUrl2;
+        }
+
+    }
+
+    public class Area1 {
+        private String picUrl1;
+
+        public void setPicUrl1(String picUrl1){
+            this.picUrl1 = picUrl1;
+        }
+        public String getPicUrl1(){
+            return this.picUrl1;
+        }
+
+    }
+
 }

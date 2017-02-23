@@ -12,6 +12,7 @@
     <color name="text_black">#333333</color>
     <color name="black">#353535</color>
     <color name="brilliant_blue">#177cd0</color>
-
+    <color name="somber">#323232</color>
     <color name="scan_bg">#7f000000</color>
+    <color name="grey">#646464</color>
 </resources>

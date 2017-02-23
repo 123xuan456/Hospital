@@ -1,81 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
 
     >
     <include
         layout="@layout/rl_titlebar"
         />
-<d.hospital.view.ScrollViewExtend
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/bg_gray">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+    <d.hospital.view.ScrollViewExtend
+        android:id="@+id/sc_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_gray"
+        android:fillViewport="true">
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-            android:background="@color/white_bg"
-            android:orientation="horizontal">
-        <ImageView
-            android:layout_marginLeft="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:src="@mipmap/bugle"
-            />
-        <TextView
-            android:id="@+id/tv_blue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="健康快讯"
-            android:layout_marginLeft="8dp"
-            android:textStyle="bold"
-            android:textSize="@dimen/textview_normal"
-            android:textColor="@color/text_blue"
-            android:layout_gravity="center_vertical"
-             />
-
-        <TextView
-            android:id="@+id/tv_roll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="云南白药创口贴，一盒只要10元！"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:textColor="@color/text_gray"
-            android:textSize="@dimen/textview_gray"
-            android:layout_gravity="center_vertical"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    </LinearLayout>
-        <include
-            layout="@layout/home_module1"
-            />
-        <include
-            layout="@layout/home_module2"
-            />
-        <include
-            layout="@layout/home_module3"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/bugle"
+                    />
+                <TextView
+                    android:id="@+id/tv_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="健康快讯"
+                    android:layout_marginLeft="8dp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textview_normal"
+                    android:textColor="@color/text_blue"
+                    android:layout_gravity="center_vertical"
+                    />
 
-            />
-        <include
-            layout="@layout/horizontalscrollview"
-            />
-        <include
-            layout="@layout/home_pager"
-            />
+                <TextView
+                    android:id="@+id/tv_roll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="云南白药创口贴，一盒只要10元！"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/textview_gray"
+                    android:layout_gravity="center_vertical"/>
 
-        <include
-            layout="@layout/home_step_number"
-            />
+            </LinearLayout>
+            <include
+                layout="@layout/home_module1"
+                />
+            <include
+                layout="@layout/home_module2"
+                />
+            <include
+                layout="@layout/home_module3"
 
-    </LinearLayout>
-</d.hospital.view.ScrollViewExtend>
+                />
+            <include
+                layout="@layout/horizontalscrollview"
+                />
+            <include
+                layout="@layout/home_pager"
+                />
+
+            <include
+                layout="@layout/home_step_number"
+                />
+
+            <include
+                layout="@layout/home_period"
+                />
+
+            <include
+                layout="@layout/home_hot"
+                />
+
+            <include
+                layout="@layout/home_plan"
+                />
+
+            <include
+                layout="@layout/home_appraisal"
+                />
+
+            <include
+                layout="@layout/home_information"
+                />
+
+        </LinearLayout>
+    </d.hospital.view.ScrollViewExtend>
 </LinearLayout>

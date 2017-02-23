@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@color/white_bg"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    <TextView
+    android:id="@+id/step_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="健康计划"
+    android:textSize="@dimen/textview_normal"
+    android:textColor="@color/black"
+    android:layout_marginLeft="16dp"
+    android:gravity="center_vertical"
+    />
+
+        <TextView
+            android:id="@+id/tv_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（已完成0/1）"
+            android:textSize="@dimen/textview_gray"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/step_tv"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/xukuang"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="17dp">
+
+        <TextView
+            android:id="@+id/iv_fanhui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+ 新计划"
+            android:textSize="@dimen/textview_gray"
+            android:gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/hongyuan"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        >
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text="11月29 今天"
+            android:textSize="@dimen/textview_normal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多少人的请朋好友"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:id="@+id/textView24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qazwsxed"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/textView24"
+            android:layout_alignStart="@+id/textView24"
+            android:layout_marginTop="3dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="3dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="未完成"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <d.hospital.view.MyListView
+        android:id="@+id/plan_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        >
+    </d.hospital.view.MyListView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray"/>
+    <RelativeLayout
+        android:id="@+id/in_total_rl_text_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+        <TextView
+            android:id="@+id/tv_unfold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展开更多"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/iv_xia" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/xia"
+            android:id="@+id/iv_xia"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pack_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:id="@+id/tv_pack_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收起"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/iv_xia" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/shang"
+                android:id="@+id/iv_shang"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

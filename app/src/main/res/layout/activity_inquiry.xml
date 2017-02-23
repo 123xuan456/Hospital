@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <include layout="@layout/layou_finish"
+        android:id="@+id/include"></include>
+
+    <LinearLayout
+        android:id="@+id/rl_grid_view"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_bg"
+        android:orientation="vertical"
+        android:layout_below="@+id/include">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="描述问题找医生"
+            android:textSize="18sp"
+            android:textColor="@color/somber"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/bg_gray"
+            />
+        <GridView
+            android:visibility="visible"
+            android:id="@+id/grid_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:fadeScrollbars="true"
+            android:drawSelectorOnTop="false"
+            android:verticalSpacing="6dp"
+            android:columnWidth="90dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textView3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/dajuxingkuang">
+
+            <EditText
+                android:id="@+id/et_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="您可以选择上述症状直接咨询医生，或者在输入框中描述您的问题，包括身体状况、疾病和症状等，我们将会推荐最专业的医生为您服务，并且保证您的隐私安全。(最少10个字)"
+                android:background="@null"
+                android:maxLength="300"
+                android:minEms="10"
+                android:gravity="top"
+                android:cursorVisible="false"
+                />
+
+            <TextView
+                android:id="@+id/astrict_nummber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="0/300"
+                android:gravity="right"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp">
+
+            <GridView
+                android:id="@+id/grid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="3dp"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:padding="5dp"
+                android:verticalSpacing="5dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible"
+                android:layout_below="@+id/textView3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加照片"
+                android:layout_marginLeft="80dp"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/somber"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView26"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginBottom="20dp"
+                android:text="病症部位、检查报告或者其他病情资料"
+                android:layout_alignBottom="@+id/grid_view"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_start"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="@drawable/lanseyuanjiao"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="开始咨询"
+            android:textColor="@color/white_bg"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

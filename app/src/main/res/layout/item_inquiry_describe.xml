@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginLeft="1dp"
+    >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="3dp"
+        android:text="糖尿病"
+        android:textColor="@color/grey"
+        android:background="@drawable/miaobianyuanjiao"
+        android:gravity="center"
+        />
+</RelativeLayout>

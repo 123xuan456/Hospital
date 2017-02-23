@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/iv_scan"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.3"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
         android:src="@mipmap/scan"
         android:layout_gravity="center_vertical"
         android:visibility="visible"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="9"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="7dp"
         android:background="@mipmap/seek_bk"
         android:layout_gravity="center_vertical">
         <ImageView
@@ -32,17 +32,15 @@
             android:layout_marginLeft="8dp"
             android:src="@mipmap/hunt"
             android:layout_centerVertical="true"/>
-        <EditText
+        <TextView
             android:id="@+id/tv_hunt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
-            android:hint="搜疾病、药品、医生、科室"
+            android:text="搜疾病、药品、医生、科室"
             android:textSize="@dimen/textview_normal"
-            android:background="@null"
             android:textColor="@color/text_gray"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/hunt" />
     </RelativeLayout>
     
@@ -53,5 +51,37 @@
         android:layout_weight="1"
         android:layout_marginRight="16dp"
         android:src="@mipmap/user"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:visibility="visible"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_dingdan"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/dingdan1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/dingdan1"
+         />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dingdan"
+            android:textColor="@color/white_bg"
+            android:textSize="@dimen/textview_little"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/textView25"
+            android:layout_below="@+id/dingdan1" />
+
+    </RelativeLayout>
 </LinearLayout>

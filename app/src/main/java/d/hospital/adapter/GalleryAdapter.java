@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import d.hospital.R;
+import d.hospital.bean.Home_moduleBean;
 
 /**
  * Created by de on 2016/12/12.
@@ -20,9 +21,9 @@ import d.hospital.R;
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
     private LayoutInflater mInflater;
     private Context mcontext;
-    private List<String> mDatas;
+    private List<Home_moduleBean.Area3> mDatas;
 
-    public GalleryAdapter(Context context, List<String> datats)
+    public GalleryAdapter(Context context, List<Home_moduleBean.Area3> datats)
     {
         this.mcontext = context;
         this.mDatas = datats;
@@ -67,7 +68,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
     public void onBindViewHolder(final ViewHolder viewHolder, final int i)
     {
         Glide.with(mcontext)
-                .load(mDatas.get(i))
+                .load(mDatas.get(i).getPicUrl3())
                 .centerCrop()//拉伸图片
                 .crossFade()//淡入淡出图片
                 .into(viewHolder.mImg);
