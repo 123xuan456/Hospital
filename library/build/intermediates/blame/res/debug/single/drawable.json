@@ -4,16 +4,12 @@
         "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\progress_loading_image_01.png"
     },
     {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\guoqi.png",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\guoqi.png"
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\run1.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\run1.png"
     },
     {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\indicator_bg_top.xml"
-    },
-    {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\app_loading1.png",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\app_loading1.png"
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\run0.png",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\run0.png"
     },
     {
         "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\app_loading0.png",
@@ -24,19 +20,63 @@
         "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.xml",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\loading.xml"
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\app_loading1.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\app_loading1.png"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\guoqi.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\guoqi.png"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\run0.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\run0.png"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_loading_image_01.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\progress_loading_image_01.png"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.xml",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\loading.xml"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\app_loading1.png",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\app_loading1.png"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_loading_image_02.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\progress_loading_image_02.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\guoqi.png",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\guoqi.png"
+    },
+    {
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_loading_image_02.png",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\progress_loading_image_02.png"
     },
     {
         "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\run1.png",
         "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\run1.png"
     },
     {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\run0.png",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\run0.png"
+        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.xml",
+        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\loading.xml"
     },
     {
-        "merged": "D:\\Hospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_loading_image_02.png",
-        "source": "D:\\Hospital\\library\\src\\main\\res\\drawable\\progress_loading_image_02.png"
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "F:\\project\\newHospital\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\app_loading0.png",
+        "source": "F:\\project\\newHospital\\library\\src\\main\\res\\drawable\\app_loading0.png"
     }
 ]
