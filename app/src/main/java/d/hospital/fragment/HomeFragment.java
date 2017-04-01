@@ -242,7 +242,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
                     Home_twoBean home_twoBean = g.fromJson(response, Home_twoBean.class);
                     if (home_twoBean.getCode() == 200) {
                         //步步为金
-                        tv_bt_in.setText(home_twoBean.getEveryStepGetGold().getText());
+//                        tv_bt_in.setText(home_twoBean.getEveryStepGetGold().getText());
                         textView.setText(home_twoBean.getEveryStepGetGold().getStep() + "步");
                         textView1.setText(home_twoBean.getEveryStepGetGold().getCalorie() + "卡");
                         textView5.setText(home_twoBean.getEveryStepGetGold().getFat() + "克");
@@ -278,6 +278,17 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
                     }
                     break;
             }
+
+            /**
+             *
+             */
+            tv_roll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+                }
+            });
         }
     };
 

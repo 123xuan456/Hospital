@@ -6,11 +6,10 @@ package d.hospital.utils;
  */
 public class UrlUtils {
 
-    public static String BASEURL=" http://192.168.0.69:8080/";//本地测试
+    public static String BASEURL=" http://192.168.0.69:8082/";//本地测试
     public static String BASEURL1="http://192.168.0.43:8080/";//本地测试
 
-
-    public static String HOME_UP_MODULE=BASEURL+"home/homepiclist";
+    public static String HOME_UP_MODULE=BASEURL+"home/homePicList";
     //问诊页面轮播图
     public static String INQUIRY_PIC=BASEURL+"askDoctor/pic";
     //问诊页面科室

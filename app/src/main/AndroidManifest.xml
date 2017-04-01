@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="d.hospital">
+          package="d.hospital">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <!-- 二维码相关权限 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
 
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name=".BaseApplication"
@@ -30,25 +30,27 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MineActivity" />
-        <activity android:name=".activity.InformationActivity" />
-        <activity android:name=".activity.Inquiry_KeShiActivity" />
-        <activity android:name=".activity.WelcomeActivity" />
-        <activity android:name=".activity.Inquiry_XiangqingActivity" />
-        <activity android:name=".activity.CommonScanActivity" />
+        <activity android:name=".activity.MineActivity"/>
+        <activity android:name=".activity.InformationActivity"/>
+        <activity android:name=".activity.Inquiry_KeShiActivity"/>
+        <activity android:name=".activity.WelcomeActivity"/>
+        <activity android:name=".activity.Inquiry_XiangqingActivity"/>
+        <activity android:name=".activity.CommonScanActivity"/>
 
         <receiver android:name=".receiver.NetReceiver">
             <intent-filter>
-                <action android:name="ConnectivityManager.CONNECTIVITY_ACTION" />
+                <action android:name="ConnectivityManager.CONNECTIVITY_ACTION"/>
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.WebActivity"></activity>
+        <activity android:name=".activity.WebActivity"/>
+        <activity android:name=".activity.HeadNewsActivity">
+        </activity>
     </application>
 
 </manifest>

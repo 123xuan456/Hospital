@@ -7,6 +7,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import d.hospital.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 /**
@@ -35,6 +38,7 @@ public class InformationActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
         setview();
+
     }
 
     private void setview() {
